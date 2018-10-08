@@ -72,7 +72,7 @@ about the usability of any async framework in C++ built only on top of callbacks
 ## Timers
 
 More directly relevant for ASIO, the intermixing of lifetime for socket operations and timers to
-time them out is difficult to manage.  Timers and their sockets need to live as least as long as
+time them out is difficult to manage.  Timers and their sockets need to live at least as long as
 both sets of callbacks, and timers need to be cancelled after socket operations have proceeded past
 certain points.  This interplay requires careful orchestration with external concurrency primitives
 due to guarantees around when timers fire (timer callbacks, after cancellation, may fire any time
